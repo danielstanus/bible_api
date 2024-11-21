@@ -1,35 +1,43 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    backports (3.15.0)
+    base64 (0.2.0)
     bible_parser (1.0.0)
       nokogiri (>= 1.6.0)
     bible_ref (1.2.0)
       parslet (~> 1.6)
+    logger (1.6.1)
     mini_portile2 (2.4.0)
-    multi_json (1.14.1)
-    mustermann (1.0.3)
+    multi_json (1.15.0)
+    mustermann (3.0.3)
+      ruby2_keywords (~> 0.0.1)
     mysql2 (0.5.2)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     parslet (1.8.2)
-    rack (2.0.7)
-    rack-protection (2.0.7)
-      rack
+    rack (3.1.8)
+    rack-protection (4.1.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
+    ruby2_keywords (0.0.5)
     sequel (5.25.0)
-    sinatra (2.0.7)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.7)
+    sinatra (4.1.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.1.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sinatra-contrib (2.0.7)
-      backports (>= 2.8.2)
-      multi_json
-      mustermann (~> 1.0)
-      rack-protection (= 2.0.7)
-      sinatra (= 2.0.7)
+    sinatra-contrib (4.1.1)
+      multi_json (>= 0.0.2)
+      mustermann (~> 3.0)
+      rack-protection (= 4.1.1)
+      sinatra (= 4.1.1)
       tilt (~> 2.0)
-    tilt (2.0.10)
+    tilt (2.4.0)
 
 PLATFORMS
   ruby
@@ -39,8 +47,8 @@ DEPENDENCIES
   bible_ref
   mysql2
   sequel
-  sinatra
-  sinatra-contrib
+  sinatra (>= 4.1.0)
+  sinatra-contrib (>= 4.1.0)
 
 BUNDLED WITH
    1.17.3
